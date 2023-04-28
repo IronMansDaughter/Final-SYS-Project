@@ -1,0 +1,7 @@
+- name: Windows User Creation
+  hosts: windows
+  gather_facts: no
+  tasks:
+  - name: Create User testuser
+    win_shell: New-ADUser -Name "testuser" -AccountPassword (ConvertTo-SecureString "SYS265Admin" -AsPlainText -Force) -Enabled $true -UserPrincipalName "testuser@sys265.local" -PasswordNeverExpires $true -Path "CN=Users,DC=sys265,DC=local"
+    

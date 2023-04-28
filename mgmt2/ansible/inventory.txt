@@ -1,0 +1,13 @@
+[windows]
+mgmt1
+[windows:vars]
+ansible_shell_type=powershell
+remote_tmp = C:\Users\SYS265Admin\Tmp
+become_method = runas
+shell_type = powershell
+[docker]
+docker
+[util1]
+util1
+[mgmt1]
+mgmt1

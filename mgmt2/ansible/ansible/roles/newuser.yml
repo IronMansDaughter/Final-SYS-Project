@@ -1,0 +1,10 @@
+- name: Adding New local user
+  hosts: util1
+  become: yes
+  tasks:
+    - name: Add new user
+      ansible.builtin.user:
+        name: sheesh
+        create_home: yes
+        shell: /bin/bash
+

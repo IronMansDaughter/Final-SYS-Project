@@ -1,0 +1,8 @@
+- name: Installing APT packages
+  hosts: docker
+  become: yes
+  tasks:
+    - name: Install nmap
+      ansible.builtin.apt:
+        name: nmap
+        state: present

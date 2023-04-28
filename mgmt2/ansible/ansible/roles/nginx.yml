@@ -1,0 +1,10 @@
+- hosts: util1
+  become: true
+  roles:
+    - geerlingguy.nginx
+  tasks:
+    - name: Ensure Nginx is installed and running
+      service:
+        name: nginx
+        state: started
+        enabled: true

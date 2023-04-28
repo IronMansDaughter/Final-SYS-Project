@@ -1,0 +1,8 @@
+- name: Installing YUM Package on dhcp1 box
+  hosts: dhcp1
+  become: yes
+  tasks:
+    - name: Install tmux
+      ansible.builtin.yum:
+        name: tmux
+        state: present
